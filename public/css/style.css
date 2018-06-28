@@ -1,0 +1,29 @@
+/*INDEX*/
+
+.logo{
+	width: 300px;
+}
+
+.nav-background{
+	background-color: #ffb5c5;
+}
+
+.nav-contact{
+	display: inline;
+}
+
+.nav-size{
+	font-size: 19px;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 400px) {
+	.logo{
+		width: 180px;
+	}
+
+	.nav-contact{
+		font-size: 12.5px;
+	}
+}
