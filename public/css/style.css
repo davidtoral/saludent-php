@@ -1,5 +1,9 @@
 /*INDEX*/
 
+body{
+	background-color: #9E4254;
+}
+
 .logo{
 	width: 300px;
 }
@@ -14,6 +18,15 @@
 
 .nav-size{
 	font-size: 19px;
+}
+
+#container-tratamientos{
+	width: 800px;
+	margin-top: 100px;
+}
+
+.icono{
+	width: 80px;
 }
 
 /*RESPONSIVE*/
