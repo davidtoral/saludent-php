@@ -1,56 +1,33 @@
-<div class="slider container-fluid">
+<!--<div class="slider container-fluid">
     <img src="img/index/slider1.png">
     <img src="img/index/slider2.png">
-</div>
+</div>!-->
 
 <div id="container-tratamientos" class="container-fluid">
 	<div class="row">
-		<div class="col-md-4 text-right">
-			<h6 class="float-right">Lorem Ipsum</h6>
-			<p class="float-right">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-4 text-left">
-			<h6 class="float-left">Lorem Ipsum</h6>
-			<p class="float-left">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
-	</div>
-	<div class="row pt-5 pb-5">
-		<div class="col-md-4 text-right">
-			<h6 class="float-right">Lorem Ipsum</h6>
-			<p class="float-right">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-4 text-left">
-			<h6 class="float-left">Lorem Ipsum</h6>
-			<p class="float-left">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 text-right">
-			<h6 class="float-right">Lorem Ipsum</h6>
-			<p class="float-right">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-2">
-			<img src="img/index/implante.png" class="icono">
-		</div>
-		<div class="col-md-4 text-left">
-			<h6 class="float-left">Lorem Ipsum</h6>
-			<p class="float-left">Lorem IpsumasddsadsadadasdsadasdasdasdaIpsumasddsadsadadasdsadasdasdasda</p>
-		</div>
+
+		{% for tratamiento in tratamientos %}
+			{% if loop.index % 2 != 0 %}
+				<div class="row p-3">
+					<div class="col-md-4 col-10 texto-derecha pt-4 segundo">
+						<h6><strong>{{tratamiento.title}}</strong></h6>
+						<p>{{tratamiento.description}}</p>
+					</div>
+					<div class="col-md-2 col-2 pt-4 primero">
+						<img src="{{tratamiento.image}}" class="icono">
+					</div>
+			{% else %}
+					<div class="col-md-2 col-2 pt-4 tercero">
+						<img src="{{tratamiento.image}}" class="icono">
+					</div>
+					<div class="col-md-4 col-10 text-left pt-4 cuarto">
+						<h6><strong>{{tratamiento.title}}</strong></h6>
+						<p>{{tratamiento.description}}</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>
+
 

@@ -7,5 +7,5 @@ use Slim\Http\Response;
 
 $app->get('/', function (Request $request, Response $response, array $args) {   
     
-    TwigUtils::render('index.html', ['title'=>'Clínica Dental Saludent']);
+    TwigUtils::render('index.html', ['title'=>'Clínica Dental Saludent', 'tratamientos'=>IndexUtils::getTratamientosAsArray()]);
 });

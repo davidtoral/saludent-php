@@ -19,6 +19,7 @@ require '../vendor/intelligenia/lulo/init.php';
 
 
 require '../lib/TwigUtils.php';
+require '../lib/IndexUtils.php';
 
 
 session_start();
